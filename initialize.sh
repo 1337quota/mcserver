@@ -1,9 +1,8 @@
 #/bin/bash
 
-sudo apt update&&sudo apt upgrade
-sudo apt install -y rclone
+sudo apt update&&sudo apt -y upgrade
+sudo apt -y install  rclone
 
-rclone sync --config rclone.conf onedrive:mcserver $(pwd)
+rclone mount --vfs-cache-mode writes --daemon --config rclone.conf onedrive:mcserver $(pwd)/mcserver
 
-#docker compose up -d -f docker-compose-playit -f docker-compose.yml
-
+docker compose up -d

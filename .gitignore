@@ -1,2 +1,6 @@
 data/
 config/
+mcserver/
+
+playit_log.txt
+rclone.conf

@@ -1,0 +1,1 @@
+rclone sync --config rclone.conf $(pwd)/mcserver onedrive:mcserver
